@@ -1,0 +1,58 @@
+#root {
+  background-color: rgba(225, 223, 221, 0.2);
+}
+
+.ms-Nav {
+  background-color: #fff;
+}
+
+.wrapper-Nav {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  margin-left:0px;
+}
+
+
+/* css for the email menu */
+.wrapper-EmailList{
+  padding-left:0px !important;
+}
+
+.emailList {
+    font-size: 0.6em;
+    margin-right:90%;
+    min-width:300px;
+    max-height:98vh;
+    overflow:auto;
+    overflow-x: hidden;
+    padding-right:0px;
+}
+
+.email {
+    background-color:#fff;
+    border-bottom: 1px solid #eee;
+    height: 150px;
+    width: 100%;
+    cursor:pointer;
+}
+
+.email:hover{
+    background-color:#eee;
+}
+
+/* adds custom scrollbar styling for emails menu */
+.emailList {
+  background-color:#fff;
+  scrollbar-width: thin;
+  scrollbar-color: #666;
+}
+.emailList::-webkit-scrollbar {
+  width: 6px;
+}
+.emailList::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0);
+}
+.emailList::-webkit-scrollbar-thumb {
+  background-color: #666;
+  border-radius: 20px;
+}
