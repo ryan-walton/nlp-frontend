@@ -1,135 +1,144 @@
 #root {
-  background-color: rgba(225, 223, 221, 0.3);
+    background-color: rgba(225, 223, 221, 0.3);
 }
 
 .ms-Nav {
-  background-color: #fff;
+    background-color: #fff;
 }
 
 .wrapper-Nav {
-  padding-left: 0px !important;
-  padding-right: 0px !important;
-  margin-left:0px;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    margin-left: 0px;
 }
 
+.wrapper-Model {
+    height: 100vh;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
 
 /* css for the email menu */
-.wrapper-EmailList{
-  padding-left:0px !important;
-  padding-right:0px !important;
-  min-width:300px;
+.wrapper-EmailList {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    min-width: 300px;
 }
 
 .emailList {
     font-size: 0.6em;
-    min-width:100%;
-    max-height:98vh;
-    overflow:auto;
+    min-width: 100%;
+    max-height: 98vh;
+    overflow: auto;
     overflow-x: hidden;
-    padding-right:0px;
+    padding-right: 0px;
 }
 
 .email {
-    background-color:#fff;
-    border-bottom: 1px solid #eee;
+    background-color: #fff;
+    border: 1px solid #7c7c7c;
     height: 150px;
     width: 100%;
-    cursor:pointer;
+    cursor: pointer;
 }
 
-.email:hover{
-    background-color:#eee;
+.email:hover {
+    background-color: #eee;
 }
 
 /* adds custom scrollbar styling for emails menu */
 .emailList {
-  background-color:#fff;
-  scrollbar-width: thin;
-  scrollbar-color: #666;
+    background-color: #fff;
+    scrollbar-width: thin;
+    scrollbar-color: #666;
 }
+
 .emailList::-webkit-scrollbar {
-  width: 6px;
+    width: 6px;
 }
+
 .emailList::-webkit-scrollbar-track {
-  background: rgba(0,0,0,0);
+    background: rgba(0, 0, 0, 0);
 }
+
 .emailList::-webkit-scrollbar-thumb {
-  background-color: #666;
-  border-radius: 20px;
+    background-color: #666;
+    border-radius: 20px;
 }
 
 /* centers the form */
-.formWrapper{
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.formWrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: right;
+    align-items: center;
 }
 
 /* adds styling to form body */
-.formWrapper form{
-  padding:20px 140px;
-  background-color: #faf9f8;
+.formWrapper form {
+    padding: 20px 20px;
+    background-color: #faf9f8;
 }
 
-.formWrapper label{
-  font-weight:600;
+.formWrapper label {
+    font-weight: 600;
 }
 
 /* makes labels on top */
-.formWrapper label, .formWrapper p{
-  width:100%;
-  display:block;
+.formWrapper label, .formWrapper p {
+    width: 100%;
+    display: block;
 }
 
 /* sets column width values */
 .colHalf {
-  display: inline-block;
-  width:50%;
+    display: inline-block;
+    width: 50%;
 }
 
 /* form row padding */
 .formWrapper .row {
-  padding:20px;
+    padding: 20px;
 }
 
 .divField {
-  border-radius:5px;
-  background-color:#fff;
-  border: 1px solid #ccc;
-  padding:5px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px;
 }
 
 /* this formats the email list body and sets text properties and overflow */
 
-.emailListBody{
-  max-width: 100%;
-  max-height: 100%;
-  overflow:hidden;
-  font-size:14px;
-  color:#777;
+.emailListBody {
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    font-size: 14px;
+    color: #777;
 }
 
 .line-clamp {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 /* email card styling */
-.email h5{
-  font-size:1rem;
-  color:#666;
-  font-weight:600;
+.email h5 {
+    font-size: 1rem;
+    color: #666;
+    font-weight: 600;
 }
 
-.email h6{
-  font-weight:500;
+.email h6 {
+    font-weight: 500;
 }
 
 /* sets default 1 line elips styling */
 .ellipsis {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

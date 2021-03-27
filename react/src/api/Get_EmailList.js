@@ -7,11 +7,11 @@ function GetEmailList(url){
 
     useEffect(()=>{
             axios.get(url)
-                .then(res => console.log(res))
-                .then(res => setEmails(res))
+                .then(res => setEmails(res.data))
+                .then(console.log(data))
                 .catch(error => console.log(error))
         }, [url])
-    console.log("Returning from getting API data fshfgh")
+    console.log("Returning from getting API data")
     return data
 }
 

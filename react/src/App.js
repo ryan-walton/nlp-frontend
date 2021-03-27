@@ -5,8 +5,10 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 /* import components */
 import Navigation from './Navigation';
-import Emails from './Emails';
-import Form from './Form.js';
+import Emails from './components/Emails.js';
+import Form from './components/Form.js';
+import Model from './components/Model.js';
+
 
 /* render app */
 function App() {
@@ -25,10 +27,13 @@ function App() {
         </div>
 
         {/* main app body or form */}
-        <div className="ms-Grid-col ms-sm9 ms-xl9 main-element">
-          <div className="ms-Grid-row">
+        <div className="ms-Grid-col ms-sm1 ms-xl2 main-element">
             <Form />
-          </div>
+        </div>
+
+        {/* Model Section For Re-Training */}
+        <div className="ms-Grid-col ms-sm1 float-right wrapper-Model">
+            <Model />
         </div>
 
       </div>
