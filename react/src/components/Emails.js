@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { Nav, initializeIcons } from '@fluentui/react';
 
-const endpointEmails = 'https://app-nlp-email.herokuapp.com/emailApp/emails/'
+const endpointEmails = 'https://app-nlp-email.herokuapp.com/emailApp/api/emails/'
 let parentEmailList = [] // fix this later, this is a copy of emailList in Emails()
 
 // returns a list of Emails
