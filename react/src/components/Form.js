@@ -10,18 +10,17 @@ function Form() {
     const [selectedTxt, setSelectedTxt] = useState([]);
 
     function getSelection() {
-        document.getElementById('emailForm-body').addEventListener('mouseup', function (e) {
-            var txt = this.textContent;
-            var start = this.selectionStart;
-            var end = this.selectionEnd;
-            if (start >= 0 && end >= 0) {
-                console.log("start: " + start);
-                console.log("end: " + end);
-                console.log("text: " + txt);
-                setSelectedTxt([start, end])
-            }
-        });
-        console.log(selectedTxt)
+        console.log("Getting Selection")
+        var e = document.getElementById('emailForm-body')
+        var txt = e.textContent;
+        var start = e.selectionStart;
+        var end = e.selectionEnd;
+        if (start >= 0 && end >= 0) {
+            setSelectedTxt([start, end])
+        }
+        else{
+            setSelectedTxt([0, 0])
+        }
     }
     useEffect(()=>{
         console.log(format("Selected String Index Start: '{0}', End: '{1}",selectedTxt[0], selectedTxt[1]))
@@ -50,7 +49,7 @@ function Form() {
                     <div id="row2col1" className="col colFull">
                         <label for="body" className="formLabel">Body: </label>
                         <label id="emailForm-selected-body-txt" name="selected-text-index">{format("Selected String Index Start: '{0}', End: '{1}",selectedTxt[0], selectedTxt[1])}</label>
-                        <textarea id="emailForm-body" name="body" rows="20" cols="100" readOnly={true} onMouseUp={getSelection}>
+                        <textarea id="emailForm-body" name="body" rows="20" cols="100" readOnly="true" onMouseUp={getSelection}>
                          </textarea>
                     </div>
                 </div>
@@ -75,6 +74,17 @@ function Form() {
                     <div id="row4col2" className="col colHalf">
                         <label for="phone" className="formLabel">Ph: </label>
                         <div className="divField">A Test Subject!</div>
+                    </div>
+                </div>
+
+                <div id="row5" className="row">
+                    <div id="row5col1" className="col colHalf">
+                        <label htmlFor="modelName" className="formLabel">Model Name: </label>
+                        <div className="divField">A Test Model Name!</div>
+                    </div>
+                    <div id="row5col2" className="col colHalf">
+                        <label htmlFor="entityName" className="formLabel">Entity Name:: </label>
+                        <div className="divField">A Test Entity Name!</div>
                     </div>
                 </div>
 
