@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="13180cef-a351-433f-8daa-04c1e43d6af6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/react/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/Emails.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Emails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/Model.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Model.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +99,8 @@
       <workItem from="1616325115592" duration="8000" />
       <workItem from="1616836174009" duration="26690000" />
       <workItem from="1616906586459" duration="4698000" />
+      <workItem from="1617021426049" duration="13000" />
+      <workItem from="1617088316198" duration="599000" />
     </task>
     <servers />
   </component>
