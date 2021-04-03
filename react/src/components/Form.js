@@ -5,10 +5,16 @@ import 'office-ui-fabric-react/dist/css/fabric.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import { format } from 'react-string-format';
 
-function Form() {
+// form where email data is displayed:
+// props:
+// formData = global state data from App.js
 
+function Form({formData}) {
+
+    // set default state
     const [selectedTxt, setSelectedTxt] = useState([]);
 
+    // get text selection from user highlight, set state to selected text
     function getSelection() {
         console.log("Getting Selection")
         var e = document.getElementById('emailForm-body')
@@ -22,6 +28,7 @@ function Form() {
             setSelectedTxt([0, 0])
         }
     }
+    // log output
     useEffect(()=>{
         console.log(format("Selected String Index Start: '{0}', End: '{1}",selectedTxt[0], selectedTxt[1]))
     },[selectedTxt])
@@ -36,12 +43,12 @@ function Form() {
                 <div id="row1" className="row">
                     <div id="row1col1" className="col colHalf">
                         <label for="sender" className="formLabel">Sender: </label>
-                        <div id="emailForm-sender" className="divField">testuser@companywebsite.com</div>
+                        <div id="emailForm-sender" className="divField">{formData.sender}</div>
                     </div>
 
                     <div id="row1col2" className="col colHalf">
                         <label for="subject" className="formLabel">Subject: </label>
-                        <div id="emailForm-subject" className="divField">A Test Subject!</div>
+                        <div id="emailForm-subject" className="divField">{formData.subject}</div>
                     </div>
                 </div>
 
@@ -49,7 +56,7 @@ function Form() {
                     <div id="row2col1" className="col colFull">
                         <label for="body" className="formLabel">Body: </label>
                         <label id="emailForm-selected-body-txt" name="selected-text-index">{format("Selected String Index Start: '{0}', End: '{1}",selectedTxt[0], selectedTxt[1])}</label>
-                        <textarea id="emailForm-body" name="body" rows="20" cols="100" readOnly="true" onMouseUp={getSelection}>
+                        <textarea id="emailForm-body" name="body" rows="20" cols="100" readOnly="true" onMouseUp={getSelection}>{formData.body}
                          </textarea>
                     </div>
                 </div>

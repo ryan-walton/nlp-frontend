@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import 'office-ui-fabric-react/dist/css/fabric.css';
 import 'bootstrap/dist/css/bootstrap.css';
+import { useState } from 'react'
 
 /* import components */
 import Navigation from './Navigation';
@@ -12,6 +13,18 @@ import Model from './components/Model.js';
 
 /* render app */
 function App() {
+
+  // global state (for testing, change later)
+  const [formData, setformData] = useState(
+    {
+      id: 1,
+      sender: "sender@email.com",
+      subject: "test subject",
+      body: "this is a test body"
+    }
+  )
+
+
   return (
     <div className="ms-Grid" dir="ltr">
       <div className="ms-Grid-row">
@@ -28,7 +41,7 @@ function App() {
 
         {/* main app body or form */}
         <div className="ms-Grid-col ms-sm1 ms-xl2 main-element">
-            <Form />
+            <Form formData={formData}/>
         </div>
 
         {/* Model Section For Re-Training */}

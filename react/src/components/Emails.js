@@ -59,7 +59,7 @@ function emailClick(e) {
     const emailId = e.currentTarget.dataset.id
     const sender = e.currentTarget.childNodes[0].innerText
     const subject = e.currentTarget.childNodes[1].innerText
-    const body = e.currentTarget.childNodes[2].textContent
+    const body = e.currentTarget.childNodes[2].innerText
     // set values
     document.getElementById('emailForm-emailId').innerHTML = emailId
     document.getElementById('emailForm-sender').innerHTML = sender
