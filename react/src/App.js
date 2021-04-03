@@ -36,7 +36,16 @@ function App() {
 
         {/* emails list */}
         <div className="ms-Grid-col ms-sm1 ms-xl2 wrapper-EmailList">
-          <Emails />
+          <Emails 
+            updateForm={emailData => setformData(
+              {
+                id: emailData.id,
+                sender: emailData.email,
+                subject: emailData.subject,
+                body: emailData.body
+              }
+            )}
+          />
         </div>
 
         {/* main app body or form */}

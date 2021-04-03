@@ -10,13 +10,11 @@ import { format } from 'react-string-format';
 // formData = global state data from App.js
 
 function Form({formData}) {
-
     // set default state
     const [selectedTxt, setSelectedTxt] = useState([]);
 
     // get text selection from user highlight, set state to selected text
     function getSelection() {
-        console.log("Getting Selection")
         var e = document.getElementById('emailForm-body')
         var txt = e.textContent;
         var start = e.selectionStart;
@@ -29,9 +27,9 @@ function Form({formData}) {
         }
     }
     // log output
-    useEffect(()=>{
-        console.log(format("Selected String Index Start: '{0}', End: '{1}",selectedTxt[0], selectedTxt[1]))
-    },[selectedTxt])
+    //useEffect(()=>{
+     //   console.log(format("Selected String Index Start: '{0}', End: '{1}",selectedTxt[0], selectedTxt[1]))
+    //},[selectedTxt])
 
 
     return (
@@ -56,8 +54,7 @@ function Form({formData}) {
                     <div id="row2col1" className="col colFull">
                         <label for="body" className="formLabel">Body: </label>
                         <label id="emailForm-selected-body-txt" name="selected-text-index">{format("Selected String Index Start: '{0}', End: '{1}",selectedTxt[0], selectedTxt[1])}</label>
-                        <textarea id="emailForm-body" name="body" rows="20" cols="100" readOnly="true" onMouseUp={getSelection}>{formData.body}
-                         </textarea>
+                        <textarea id="emailForm-body" name="body" rows="20" cols="100" readOnly="true" onMouseUp={getSelection} value={formData.body}/>
                     </div>
                 </div>
 

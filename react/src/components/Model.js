@@ -15,11 +15,10 @@ const [selectedTxt, setSelectedTxt] = useState([]);
                 setSelectedTxt([start, end])
             }
         });
-        console.log(selectedTxt)
     }
-    useEffect(()=>{
-        console.log(format("Selected String Index Start: '{0}', End: '{1}",selectedTxt[0], selectedTxt[1]))
-    },[selectedTxt])
+    //useEffect(()=>{
+    //    console.log(format("Selected String Index Start: '{0}', End: '{1}",selectedTxt[0], selectedTxt[1]))
+    //},[selectedTxt])
 
 
     return(
