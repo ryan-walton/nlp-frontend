@@ -4,12 +4,15 @@ import {Text, initializeIcons} from '@fluentui/react';
 import 'office-ui-fabric-react/dist/css/fabric.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import { format } from 'react-string-format';
+import {connect} from "react-redux";
+import FocusedEmail from "../reducers/updateInFocusEmail";
 
 // form where email data is displayed:
 // props:
 // formData = global state data from App.js
 
-function Form({formData}) {
+function Form(props) {
+
     // set default state
     const [selectedTxt, setSelectedTxt] = useState([]);
 
@@ -26,12 +29,8 @@ function Form({formData}) {
             setSelectedTxt([0, 0])
         }
     }
-    // log output
-    //useEffect(()=>{
-     //   console.log(format("Selected String Index Start: '{0}', End: '{1}",selectedTxt[0], selectedTxt[1]))
-    //},[selectedTxt])
 
-
+    console.log(props)
     return (
         <div className="formWrapper">
             <form className="ms-depth-8">
@@ -41,12 +40,12 @@ function Form({formData}) {
                 <div id="row1" className="row">
                     <div id="row1col1" className="col colHalf">
                         <label for="sender" className="formLabel">Sender: </label>
-                        <div id="emailForm-sender" className="divField">{formData.sender}</div>
+                        <div id="emailForm-sender" className="divField">{props.emailInFocusData.emailTo}</div>
                     </div>
 
                     <div id="row1col2" className="col colHalf">
                         <label for="subject" className="formLabel">Subject: </label>
-                        <div id="emailForm-subject" className="divField">{formData.subject}</div>
+                        <div id="emailForm-subject" className="divField">{props.emailInFocusData.subject}</div>
                     </div>
                 </div>
 
@@ -54,7 +53,7 @@ function Form({formData}) {
                     <div id="row2col1" className="col colFull">
                         <label for="body" className="formLabel">Body: </label>
                         <label id="emailForm-selected-body-txt" name="selected-text-index">{format("Selected String Index Start: '{0}', End: '{1}",selectedTxt[0], selectedTxt[1])}</label>
-                        <textarea id="emailForm-body" name="body" rows="20" cols="100" readOnly="true" onMouseUp={getSelection} value={formData.body}/>
+                        <textarea id="emailForm-body" name="body" rows="20" cols="100" readOnly="true" onMouseUp={getSelection} value={props.emailInFocusData.body}/>
                     </div>
                 </div>
 
@@ -97,6 +96,11 @@ function Form({formData}) {
     );
 }
 
+const mapStateToProps = state => {
+    console.log("Subscribing Worked :)")
+    console.log(state.EmailInFocus);
+    return {
+        emailInFocusData: state.EmailInFocus.value};
+};
 
-
-export default Form;
+export default connect(mapStateToProps)(Form);

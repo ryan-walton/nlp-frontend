@@ -9,6 +9,7 @@ import Navigation from './Navigation';
 import Emails from './components/Emails.js';
 import Form from './components/Form.js';
 import Model from './components/Model.js';
+import {connect} from "react-redux";
 
 
 /* render app */
@@ -23,7 +24,6 @@ function App() {
       body: "this is a test body"
     }
   )
-
 
   return (
     <div className="ms-Grid" dir="ltr">
